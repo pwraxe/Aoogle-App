@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AoogleApp" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/black_theme</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowBackground">@color/black_theme</item>
+    </style>
+</resources>
