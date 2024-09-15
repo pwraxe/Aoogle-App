@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,6 +21,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIcon
@@ -57,9 +59,8 @@ fun SideInfo(modifier: Modifier = Modifier) {
     val uriHandler = LocalUriHandler.current
 
     Column (modifier = modifier
-        .padding(top = 6.dp)
-        .background(color = Color(0xFF33353A))
-        .padding(horizontal = 10.dp, vertical = 2.dp)
+        .background(color = Color(0xFF33353A), shape = RoundedCornerShape(20.dp))
+        .padding(start = 10.dp)
     ) {
 
 
@@ -69,11 +70,12 @@ fun SideInfo(modifier: Modifier = Modifier) {
             fontSize = 20.sp,
             color = Color.White,
             modifier = modifier
+                .padding(top = 10.dp, bottom = 6.dp)
                 .background(color = Color(0xFF33353A))
-                .padding(vertical = 10.dp)
+
         )
 
-        Row {
+        Row (verticalAlignment = Alignment.CenterVertically){
             Text(
                 text = "Born: ",
                 fontWeight = FontWeight.Bold,
@@ -95,7 +97,7 @@ fun SideInfo(modifier: Modifier = Modifier) {
 
         Spacer(modifier = modifier.padding(top = 6.dp))
 
-        Row {
+        Row (verticalAlignment = Alignment.CenterVertically){
             Text(
                 text = "Education: ",
                 fontWeight = FontWeight.Bold,
@@ -224,7 +226,6 @@ fun SideInfo(modifier: Modifier = Modifier) {
 
         Spacer(modifier = modifier.padding(top = 6.dp))
 
-
         FlowRow {
             for (index in areasWorkedOn.indices) {
                 Text(
@@ -234,7 +235,6 @@ fun SideInfo(modifier: Modifier = Modifier) {
                 )
             }
         }
-
 
         Spacer(modifier = modifier.padding(top = 6.dp))
 
@@ -247,8 +247,6 @@ fun SideInfo(modifier: Modifier = Modifier) {
                 )
             }
         }
-
-
 
         HorizontalDivider(
             color = Color(0XFF46484A),

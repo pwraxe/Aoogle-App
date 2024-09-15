@@ -28,6 +28,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -36,6 +37,7 @@ import com.codexdroid.aoogleapp.common_ui.ProfileTooltip
 import com.codexdroid.aoogleapp.common_ui.TopMenu
 import com.codexdroid.aoogleapp.data.SearchMenu
 import com.codexdroid.aoogleapp.data.searchMenu
+import com.codexdroid.aoogleapp.ui.theme.fontProductSansBold
 import com.codexdroid.aoogleapp.ui.theme.fontProductSansNormal
 import pages.Images
 import pages.Experience
@@ -64,15 +66,33 @@ fun searchPage(
 
             Column {
 
-                TopMenu(onClickGoogle = {
-                    onNavigate()
-                }, onClickedImages = { profile = true })
+//                TopMenu(onClickGoogle = {
+//                    onNavigate()
+//                }, onClickedImages = { profile = true })
+
+
+                Text(
+                    text = "Google",
+                    fontSize = 25.sp,
+                    fontFamily = fontProductSansBold,
+                    color = Color.White,
+                    textAlign = TextAlign.Center,
+                    style = TextStyle(fontFamily = fontProductSansNormal),
+                    modifier = modifier
+                        .padding(10.dp)
+                        .align(alignment = Alignment.CenterHorizontally)
+                        .clickable {}
+                )
+
 
                 //================================HEADER===================================
                 Row(modifier = modifier
                     .padding(horizontal = 10.dp)
                     .background(color = Color(0XFF303134), shape = CircleShape),
                     verticalAlignment = Alignment.CenterVertically) {
+
+
+
 
                     BasicTextField(
                         value = inputSearch,

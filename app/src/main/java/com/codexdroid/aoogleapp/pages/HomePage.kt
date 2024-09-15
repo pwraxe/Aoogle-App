@@ -55,7 +55,7 @@ import com.codexdroid.aoogleapp.ui.theme.fontProductSansNormal
 import com.codexdroid.aoogleapp.utils.showSnack
 
 
-@Preview
+@Preview(device = "spec:id=reference_desktop,shape=Normal,width=1920,height=1080,unit=dp,dpi=160")
 @Composable
 fun HomePreview(modifier: Modifier = Modifier) {
     HomePage({i,s -> },{})
@@ -273,14 +273,14 @@ fun HomePage(
             ) {
 
                 Text (
-                    text = "India, MH15--",
+                    text = "Pune, India",
                     color = Color.White,
                     modifier = modifier.weight(1f),
                     fontFamily = fontProductSansNormal,
                 )
 
                 Text (
-                    text = "Mobile Version-1.Alpha",
+                    text = "Mobile Version-1.2",
                     color = Color.White,
 
                     textAlign = TextAlign.Center,

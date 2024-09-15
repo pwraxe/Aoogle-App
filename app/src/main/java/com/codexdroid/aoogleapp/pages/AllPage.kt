@@ -22,6 +22,7 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.NotificationAdd
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -41,6 +42,7 @@ import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.codexdroid.aoogleapp.R
 import com.codexdroid.aoogleapp.common_ui.SideInfo
+import com.codexdroid.aoogleapp.common_ui.horizontalLine
 import com.codexdroid.aoogleapp.common_ui.smallDot
 import com.codexdroid.aoogleapp.data.PageAllItemData
 import com.codexdroid.aoogleapp.ui.theme.fontProductSansBold
@@ -225,9 +227,7 @@ fun About(modifier: Modifier = Modifier) {
                         colors = CardDefaults.cardColors(containerColor = Color(0XFF202124))
                     ) {
                         Text(
-                            text = "I am a passionate Android developer with 3+ years of experience, specialising in Kotlin. " +
-                                    "Currently a Software Developer, I am working towards becoming a Professional Android developer " +
-                                    "at our parent company. The skills and experience I have gained in my role will help me achieve this goal.",
+                            text = "I am a Software Developer with over 3 years of specialized experience in native Android development using Kotlin. Throughout my career, I have successfully developed nearly 40 applications, including 6 personal, and 16 Organizational apps built fromscratch. I have also contributed to the enhancement of 8 existing applications. I have hosted 8 applications on the Google PlayStore, with 2 Own Crafted.",
                             fontSize = 14.sp,
                             fontFamily = fontProductSansNormal,
                             color = Color(0XFFBDC1C6),
@@ -238,7 +238,13 @@ fun About(modifier: Modifier = Modifier) {
             }
 
             item {
+
+                HorizontalDivider(thickness = 8.dp, modifier = modifier, color = Color(0XFF202124))
+            }
+
+            item {
                 SideInfo(modifier = modifier
+
                     .background(color = Color(0xFF303136))
                 )
             }

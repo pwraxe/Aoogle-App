@@ -47,7 +47,7 @@ fun Starter() {
                 currentString = str
             },
             onViewResume = {
-                localUri.openUri("https://drive.google.com/file/d/1CM2dOQIVanLNl3UF1uNiMK1jQPBxdRvv/view")
+                localUri.openUri("https://drive.google.com/file/d/1LUmOwZ0KiT0J4veLw68jKkgQQ7O4aSn3/view")
             }
         )
         PAGE.SEARCH.name -> searchPage(
